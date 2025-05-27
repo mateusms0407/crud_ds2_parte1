@@ -1,0 +1,37 @@
+CREATE DATABASE sistema_tarefas;
+USE sistema_tarefas;
+
+CREATE TABLE usuario (
+    idusuario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL UNIQUE,
+    senha VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE categorias (
+    idcategorias INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(45) NOT NULL,
+    descricao VARCHAR(45),
+    usuario_idusuario INT,
+    FOREIGN KEY (usuario_idusuario) REFERENCES usuario(idusuario)
+);
+
+CREATE TABLE tarefas (
+    idtarefas INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(45) NOT NULL,
+    descricao VARCHAR(45),
+    status TINYTEXT,
+    data DATE,
+    usuario_idusuario INT,
+    categorias_idcategorias INT,
+    FOREIGN KEY (usuario_idusuario) REFERENCES usuario(idusuario),
+    FOREIGN KEY (categorias_idcategorias) REFERENCES categorias(idcategorias)
+);
+
+CREATE TABLE comentario (
+    idcomentario INT AUTO_INCREMENT PRIMARY KEY,
+    texto VARCHAR(500),
+    data_comentario DATE,
+    usuario_idusuario INT,
+    FOREIGN KEY (usuario_idusuario) REFERENCES usuario(idusuario)
+);

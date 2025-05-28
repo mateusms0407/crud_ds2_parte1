@@ -9,17 +9,15 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
 
     if($ms -> login($email,$senha) == true){
         if(isset($_SESSION['idUser'])){
-            header("location: pagina.php");
+            header("location: protecao.php");
         }else{
             header("location: index.php");
         }
     }else{
         echo"email ou senha incorreto";
-        header("location: index.php");
 
     }
 }else{
     echo"email ou senha não informado";
-    header("location: index.php");
 }
 ?>

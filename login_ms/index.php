@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,5 +20,12 @@
             <input class="botao_login" type="submit" value="Login">
         </form>
     </div>
+    <?php
+    if(isset($_GET['erro']) && $_GET['erro'] ==  1){
+        echo "email ou senha incorreto";
+    }elseif(isset($_GET['erro']) && $_GET['erro'] == 2) {
+        echo "email ou senha não informado";
+    }
+    ?>
 </body>
 </html>

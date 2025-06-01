@@ -15,7 +15,7 @@
        <form action="logar.php" method='POST'>
             <label>E-mail:</label>
             <input  type="text" name='email' id='email'>
-            senha:
+            <label>Senha:</label>
             <input type="password" name='senha' id='senha'>
             <input class="botao_login" type="submit" value="Login">
         </form>

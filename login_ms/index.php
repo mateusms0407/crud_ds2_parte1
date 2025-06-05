@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-    <img class="logo" src="logo_ms.png" alt="logo">;
-
+    <div class="divlogo">
+        <img class="logo" src="logo_ms.png" alt="logo">
+    </div>
     <div class="area_login">
+        <h3 class="seja">Seja bem vindo</h3>
+        <img class="usu" src="usuario.png" alt="usuario">
        <form action="logar.php" method='POST'>
             <label>E-mail:</label>
             <input  type="text" name='email' id='email'>

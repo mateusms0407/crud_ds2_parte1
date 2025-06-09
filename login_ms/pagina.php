@@ -12,5 +12,7 @@
 <body>
     <h1>pagina segura</h1>
     <a href="logout.php">Sair da Conta</a>
+    <a href="form_tarefas.php">cadastrar</a>
+
 </body>
 </html>

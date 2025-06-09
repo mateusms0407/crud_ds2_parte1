@@ -20,6 +20,7 @@
             <label>Senha:</label>
             <input type="password" name='senha' id='senha'>
             <input class="botao_login" type="submit" value="Login">
+            <h4 class="cadastrar">cadastre-se</h4>
         </form>
     </div>
     <?php

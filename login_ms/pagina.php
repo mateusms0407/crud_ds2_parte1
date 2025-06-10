@@ -3,16 +3,26 @@
 <html lang="en">
 <head>
     <?php 
-    require_once 'protecao.php';
+    // require_once 'protecao.php';
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <h1>pagina segura</h1>
-    <a href="logout.php">Sair da Conta</a>
-    <a href="form_tarefas.php">cadastrar</a>
-
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <h1><a href="#"><img src="logo_ms.png" alt="logo"></a></h1>
+                </div>
+                <ul class="navlinks">
+                    <li class="trave"><a href="form_tarefas.php" >CADASTRAR</a></li>
+                    <li class="trave"><a href="#">PRODUTOS</a></li>
+                    <li class="trave"><a href="#">GALERIA</a></li>
+                    <li class="isolado"><a href="logout.php">SAIR</a></li>
+                </ul>
+            </nav>
+        </header>
 </body>
 </html>

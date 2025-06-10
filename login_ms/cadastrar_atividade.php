@@ -1,12 +1,5 @@
 <?php
-    session_start()
     require_once 'conexao.php';
-
-    if (isset($_POST['id_tarefas'])){
-        $id_tarefas = $_POST['id_tarefas'];
-    } else {
-        echo 'tem que preencher';
-    }
 
     if (isset($_POST['titulo'])){
         $titulo = $_POST['titulo'];
@@ -27,11 +20,9 @@
     }
 
 
-
-    $sql = "INSERT INTO tarefas (id_tarefas, titulo, descricao, statu) VALUES (:id_tarefas, :titulo,:descricao,:statu)";
+    $sql = "INSERT INTO tarefas ( titulo, descricao, statu) VALUES ( :titulo,:descricao,:statu)";
     $stmt = $conexao->prepare($sql);
 
-    $stmt->bindValue(':id_tarefas', $id_tarefas);
     $stmt->bindValue(':titulo', $titulo);
     $stmt->bindValue(':descricao', $descricao);
     $stmt->bindValue(':statu', $status);

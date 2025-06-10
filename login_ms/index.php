@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,14 +21,15 @@
             <input type="password" name='senha' id='senha'>
             <input class="botao_login" type="submit" value="Login">
             <h4 class="cadastrar">cadastre-se</h4>
+            <?php
+                if(isset($_GET['erro']) && $_GET['erro'] ==  1){
+                    echo "email ou senha incorreto";
+                }elseif(isset($_GET['erro']) && $_GET['erro'] == 2) {
+                    echo "email ou senha não informado";
+                }
+            ?>
         </form>
     </div>
-    <?php
-    if(isset($_GET['erro']) && $_GET['erro'] ==  1){
-        echo "email ou senha incorreto";
-    }elseif(isset($_GET['erro']) && $_GET['erro'] == 2) {
-        echo "email ou senha não informado";
-    }
-    ?>
+   
 </body>
 </html>

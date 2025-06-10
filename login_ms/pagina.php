@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <?php 
-    // require_once 'protecao.php';
+        require_once 'protecao.php'
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +17,9 @@
                     <h1><a href="#"><img src="logo_ms.png" alt="logo"></a></h1>
                 </div>
                 <ul class="navlinks">
-                    <li class="trave"><a href="form_tarefas.php" >CADASTRAR</a></li>
-                    <li class="trave"><a href="#">PRODUTOS</a></li>
-                    <li class="trave"><a href="#">GALERIA</a></li>
+                    <li class="trave"><a href="" >HOME</a></li>
+                    <li class="trave"><a href="read1.php">TAREFAS</a></li>
+                    <li class="trave"><a href="#">CATEGORIAS</a></li>
                     <li class="isolado"><a href="logout.php">SAIR</a></li>
                 </ul>
             </nav>

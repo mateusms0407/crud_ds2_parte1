@@ -21,7 +21,7 @@ amigo mateus, aqui é mateus, voce tem que alterar os nomes parceiro
     }
 
 
-    $sql = "INSERT INTO tarefas ( titulo, descricao, statu) VALUES ( :titulo,:descricao,:statu)";
+    $sql = "INSERT INTO tarefas (titulo, descricao, statu) VALUES ( :titulo,:descricao,:statu)";
     $stmt = $conexao->prepare($sql);
 
     $stmt->bindValue(':titulo', $titulo);

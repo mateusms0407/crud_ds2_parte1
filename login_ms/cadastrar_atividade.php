@@ -20,7 +20,7 @@
     }
 
 
-    $sql = "INSERT INTO tarefas ( titulo, descricao, statu) VALUES ( :titulo,:descricao,:statu)";
+    $sql = "INSERT INTO tarefas (titulo, descricao, statu) VALUES ( :titulo,:descricao,:statu)";
     $stmt = $conexao->prepare($sql);
 
     $stmt->bindValue(':titulo', $titulo);
@@ -28,5 +28,7 @@
     $stmt->bindValue(':statu', $status);
 
     $stmt->execute();
+    header("Location: read1.php");
+
     
 ?>

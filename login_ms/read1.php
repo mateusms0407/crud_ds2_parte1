@@ -42,11 +42,12 @@
                 echo "<td>" . $rs->titulo . "</td>";
                 echo "<td>" . $rs->descricao . "</td>";
                 echo "<td>" . $rs->statu . "</td>";
-                echo "<td><center>
-                        <a href=\"alterar.php?id=" . $rs->id_tarefas . "\">[Alterar]</a>
+               echo "<td><center>
+                        <a href=\"?act=upd&id_tarefas=" . $rs->id_tarefas . "\">[Alterar]</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href=\"delete1.php?id=" . $rs->id_tarefas . "\">[Excluir]</a>
-                      </center></td>";
+                        <a href=\"?act=del&id_tarefas=" . $rs->id_tarefas . "\" 
+                         onclick=\"return confirm('Tem certeza que deseja excluir esta tarefa?');\">[Excluir]</a>
+                    </center></td>";
                 echo "</tr>";
             }
         } else {

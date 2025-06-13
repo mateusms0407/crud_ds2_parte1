@@ -19,13 +19,20 @@
         $status = null;
     }
 
+    if (isset($_POST['data'])){
+        $data = $_POST['data'];
+    } else {
+        $data = null;
+    }
 
-    $sql = "INSERT INTO tarefas (titulo, descricao, statu) VALUES ( :titulo,:descricao,:statu)";
+
+    $sql = "INSERT INTO tarefas (titulo, descricao, statu, data) VALUES ( :titulo,:descricao,:statu,:data)";
     $stmt = $conexao->prepare($sql);
 
     $stmt->bindValue(':titulo', $titulo);
     $stmt->bindValue(':descricao', $descricao);
     $stmt->bindValue(':statu', $status);
+    $stmt->bindValue(':data', $data);
 
     $stmt->execute();
     header("Location: read1.php");

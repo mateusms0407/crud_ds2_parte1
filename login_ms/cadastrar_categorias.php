@@ -1,11 +1,10 @@
-amigo mateus, aqui é mateus, voce tem que alterar os nomes parceiro
 <?php
     require_once 'conexao.php';
 
-    if (isset($_POST['titulo'])){
-        $titulo = $_POST['titulo'];
+    if (isset($_POST['nome'])){
+        $nome = $_POST['nome'];
     } else {
-        $titulo = null;
+        $nome = null;
     }
 
     if (isset($_POST['descricao'])){
@@ -14,19 +13,12 @@ amigo mateus, aqui é mateus, voce tem que alterar os nomes parceiro
         $descricao = null;
     }
 
-    if (isset($_POST['statu'])){
-        $status = $_POST['statu'];
-    } else {
-        $status = null;
-    }
 
-
-    $sql = "INSERT INTO tarefas (titulo, descricao, statu) VALUES ( :titulo,:descricao,:statu)";
+    $sql = "INSERT INTO categorias (nome, descricao) VALUES ( :nome,:descricao)";
     $stmt = $conexao->prepare($sql);
 
-    $stmt->bindValue(':titulo', $titulo);
+    $stmt->bindValue(':nome', $nome);
     $stmt->bindValue(':descricao', $descricao);
-    $stmt->bindValue(':statu', $status);
 
     $stmt->execute();
     

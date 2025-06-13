@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,12 +15,12 @@
             <ul class="navlinks">
                 <li class="trave"><a href="pagina.php" >HOME</a></li>
                 <li class="trave"><a href="">TAREFAS</a></li>
-                <li class="trave"><a href="#">CATEGORIAS</a></li>
+                <li class="trave"><a href="">CATEGORIAS</a></li>
                 <li class="isolado"><a href="logout.php">SAIR</a></li>
             </ul>
         </nav>
     </header>
-    <table border="1" width="100%">
+    <table width="100%">
         <tr>
             <th>id</th>
             <th>tarefas</th>
@@ -36,17 +36,17 @@
         $stmt = $conexao->prepare("SELECT * FROM tarefas");
 
         if ($stmt->execute()) {
-            while ($rs = $stmt->fetch(PDO::FETCH_OBJ)) {
+            while ($exibir = $stmt->fetch(PDO::FETCH_OBJ)) {
                 echo "<tr>";
-                echo "<td>" . $rs->id_tarefas . "</td>";
-                echo "<td>" . $rs->titulo . "</td>";
-                echo "<td>" . $rs->descricao . "</td>";
-                echo "<td>" . $rs->statu . "</td>";
-               echo "<td><center>
-                        <a href=\"?act=upd&id_tarefas=" . $rs->id_tarefas . "\">[Alterar]</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href=\"?act=del&id_tarefas=" . $rs->id_tarefas . "\" 
-                         onclick=\"return confirm('Tem certeza que deseja excluir esta tarefa?');\">[Excluir]</a>
+                echo "<td>" . $exibir->id_tarefas . "</td>";
+                echo "<td>" . $exibir->titulo . "</td>";
+                echo "<td>" . $exibir->descricao . "</td>";
+                echo "<td>" . $exibir->statu . "</td>";
+                echo "<td><center>
+                    <a href=\"delete1.php?id_tarefas=" . $exibir->id_tarefas . "\">[Alterar]</a>
+        
+                    <a href=\"delete1.php?id_tarefas=" . $exibir->id_tarefas . "\" 
+                    onclick=\"return confirm('Tem certeza que deseja excluir esta tarefa?');\">[Excluir]</a>
                     </center></td>";
                 echo "</tr>";
             }

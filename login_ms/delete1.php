@@ -1,21 +1,16 @@
 <?php
-    require 'conexao.php';
-    require 'read1.php';
-        if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "del" && $id_tarefas != "") {
-            try {
-            $stmt = $conexao->prepare("DELETE FROM tarefas WHERE id = ?");
-            $stmt->bindParam(1, $id_tarefas, PDO::PARAM_INT);
-            if ($stmt->execute()) {
-                echo "Registo foi excluído com êxito";
-                $id_tarefas = null;
-                header("Location: lista_tarefas.php");
-                exit;
-            } else {
-                throw new PDOException("Erro: Não foi possível executar a declaração
-    sql");
-            }
-        } catch (PDOException $erro) {
-            echo "Erro: ".$erro->getMessage();
-        }
-    }
+require_once 'conexao.php';
+
+$id = filter_input(INPUT_GET, 'id_tarefas', FILTER_VALIDATE_INT);
+
+if ($id === false || $id === null) {
+    echo "ID inválido.";
+    exit;
+}
+
+$stmt = $conexao->prepare("DELETE FROM tarefas WHERE id_tarefas = ?");
+$stmt->execute([$id]);
+
+header("Location: read1.php");
+exit();
 ?>

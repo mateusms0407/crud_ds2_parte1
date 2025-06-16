@@ -20,7 +20,7 @@
             </ul>
         </nav>
     </header>
-    <table width="100%">
+    <table border="1" width="100%">
         <tr>
             <th>id</th>
             <th>tarefas</th>

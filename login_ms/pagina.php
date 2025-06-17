@@ -19,7 +19,7 @@
                 <ul class="navlinks">
                     <li class="trave"><a href="" >HOME</a></li>
                     <li class="trave"><a href="read1.php">TAREFAS</a></li>
-                    <li class="trave"><a href="#">CATEGORIAS</a></li>
+                    <li class="trave"><a href="read2.php">CATEGORIAS</a></li>
                     <li class="isolado"><a href="logout.php">SAIR</a></li>
                 </ul>
             </nav>

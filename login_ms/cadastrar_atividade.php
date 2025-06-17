@@ -1,5 +1,6 @@
 <?php
     require_once 'conexao.php';
+    require 'protecao.php';
 
     if (isset($_POST['titulo'])){
         $titulo = $_POST['titulo'];

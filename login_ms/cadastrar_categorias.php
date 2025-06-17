@@ -1,5 +1,6 @@
 <?php
     require_once 'conexao.php';
+    require 'protecao.php';
 
     if (isset($_POST['nome'])){
         $nome = $_POST['nome'];
@@ -21,5 +22,6 @@
     $stmt->bindValue(':descricao', $descricao);
 
     $stmt->execute();
+    header("Location: read2.php");
     
 ?>

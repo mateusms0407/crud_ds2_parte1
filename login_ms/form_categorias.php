@@ -1,3 +1,6 @@
+<?php
+require 'protecao.php'
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +10,7 @@
 </head>
 <body>
     <form action="cadastrar_categorias.php" method='POST'>
-        <h1>tarefas</h1>
+        <h1>categorias</h1>
         <hr>
         <label for="nome">nome:</label>
         <input type="text" name='nome' id='nome'>

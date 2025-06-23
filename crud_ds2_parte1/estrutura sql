@@ -1,0 +1,37 @@
+CREATE DATABASE mstarefas;
+USE mstarefas;
+
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE categorias (
+    id_categorias INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao VARCHAR(255),
+    usuario_idusuario INT,
+    FOREIGN KEY (usuario_idusuario) REFERENCES usuario(idusuario)
+);
+
+CREATE TABLE tarefas (
+    id_tarefas INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(45) NOT NULL,
+    descricao VARCHAR(100),
+    status TINYINT,
+    data DATE,
+    usuario_idusuario INT,
+    categorias_idcategorias INT,
+    FOREIGN KEY (usuario_idusuario) REFERENCES usuario(idusuario),
+    FOREIGN KEY (categorias_idcategorias) REFERENCES categorias(idcategorias)
+);
+
+CREATE TABLE comentario (
+    id_comentario INT AUTO_INCREMENT PRIMARY KEY,
+    texto TEXT(300),
+    data_comentario DATE,
+    usuario_idusuario INT,
+    FOREIGN KEY (usuario_idusuario) REFERENCES usuario(idusuario)
+);

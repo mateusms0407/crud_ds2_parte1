@@ -1,5 +1,4 @@
 <?php
-session_start();
 try {
 global $conexao;
 $conexao = new PDO("mysql:host=localhost;dbname=crudms;charset=utf8mb4",

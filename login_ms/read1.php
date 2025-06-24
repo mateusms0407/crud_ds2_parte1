@@ -23,7 +23,7 @@ require 'protecao.php'
             </ul>
         </nav>
     </header>
-    <table border="1" width="100%">
+    <table border='1' class="tabela">
         <tr>
             <th>id</th>
             <th>tarefas</th>
@@ -48,10 +48,12 @@ require 'protecao.php'
                 echo "<td>" . $exibir->statu . "</td>";
                 echo "<td>" . $exibir->data . "</td>";
                 echo "<td><center>
-                    <a href=\"update1.php?id_tarefas=" . $exibir->id_tarefas . "\">[Alterar]</a>
+                
+                    <a href='update1.php?id_tarefas=" . htmlspecialchars($exibir->id_tarefas) . "'>Alterar</a>
+                    
         
                     <a href=\"delete1.php?id_tarefas=" . $exibir->id_tarefas . "\" 
-                    onclick=\"return confirm('Tem certeza que deseja excluir esta tarefa?');\">[Excluir]</a>
+                    onclick=\"return confirm('Tem certeza que deseja excluir esta tarefa?');\">Excluir</a>
                     </center></td>";
                 echo "</tr>";
             }

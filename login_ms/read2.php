@@ -23,7 +23,7 @@ require 'protecao.php'
             </ul>
         </nav>
     </header>
-    <table border="1" width="100%">
+    <table border="1"  class="tabela">
         <tr>
             <th>id</th>
             <th>categorias</th>
@@ -44,10 +44,10 @@ require 'protecao.php'
                 echo "<td>" . $exibir->nome . "</td>";
                 echo "<td>" . $exibir->descricao . "</td>";
                 echo "<td><center>
-                    <a href=\"update2.php?id_categoria=" . $exibir->id_categoria . "\">[Alterar]</a>
+                     <a href='update2.php?id_categoria=" . htmlspecialchars($exibir->id_categoria) . "'>Alterar</a>
         
                     <a href=\"delete2.php?id_categoria=" . $exibir->id_categoria . "\" 
-                    onclick=\"return confirm('Tem certeza que deseja excluir esta categoria?');\">[Excluir]</a>
+                    onclick=\"return confirm('Tem certeza que deseja excluir esta categoria?');\">Excluir</a>
                     </center></td>";
                 echo "</tr>";
             }

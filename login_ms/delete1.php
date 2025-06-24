@@ -1,6 +1,5 @@
 <?php
 require_once 'conexao.php';
-require_once 'delete1.php';
 
 
 $id = filter_input(INPUT_GET, 'id_tarefas', FILTER_VALIDATE_INT);

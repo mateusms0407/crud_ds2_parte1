@@ -1,4 +1,5 @@
 <?php
+session_start();
 class usuario{
     public function login ($email, $senha){
         global $conexao;

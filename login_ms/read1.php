@@ -23,7 +23,7 @@ require 'protecao.php'
             </ul>
         </nav>
     </header>
-    <table border='1' class="tabela">
+    <table border='1'>
         <tr>
             <th>id</th>
             <th>tarefas</th>
@@ -64,7 +64,7 @@ require 'protecao.php'
         echo "<tr><td colspan='5'>Erro: " . $erro->getMessage() . "</td></tr>";
     }
     ?>
-    <a href="form_tarefas.php" >CRIAR</a>
+    <a class="criar" href="form_tarefas.php" >CRIAR</a>
     </table>
 </body>
 </html>

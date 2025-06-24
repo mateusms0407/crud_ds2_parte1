@@ -7,11 +7,11 @@ require 'protecao.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastrar categorias</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <form action="cadastrar_categorias.php" method='POST'>
-        <h1>categorias</h1>
-        <hr>
+        <h1>criar categorias</h1>
         <label for="nome">nome:</label>
         <input type="text" name='nome' id='nome'>
 
@@ -19,7 +19,6 @@ require 'protecao.php'
         <input type="text" name='descricao' id='descricao'>
 
         <input type="submit" value='salvar'>
-        <hr>
     </form>
 </body>
 </html>

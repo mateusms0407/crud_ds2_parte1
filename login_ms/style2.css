@@ -54,14 +54,63 @@ body{
 section div a>img{
     width: 600px;
 }
-.tabela{
-    width: 100%;
-    background-color: aliceblue;
-    border: none;
-}
+
 a{
     color: rgb(208, 208, 208);
     background-color: #2c3e50;
     border-radius: 4px;
     text-decoration: none;
+}
+
+.criar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    z-index: 1000;
+}
+
+.criar:hover {
+    background-color: black;
+}
+
+
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+td a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin: 0 4px;
+    display: inline-block;
+}
+
+td a:hover {
+    background-color: #2c3e50;
+    color: white;
 }

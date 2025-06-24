@@ -7,11 +7,11 @@ require 'protecao.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastrar tarefas</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <form action="cadastrar_atividade.php" method='POST'>
-        <h1>tarefas</h1>
-        <hr>
+        <h1> criar tarefas</h1>
         <label for="titulo">titulo:</label>
         <input type="text" name='titulo' id='titulo'>
 
@@ -25,7 +25,6 @@ require 'protecao.php'
         <input type="date" name='data' id='data'>
 
         <input type="submit" value='salvar'>
-        <hr>
     </form>
 </body>
 </html>

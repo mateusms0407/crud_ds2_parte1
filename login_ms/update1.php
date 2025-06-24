@@ -44,11 +44,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Alterar tarefa</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <form action="" method="POST">
         <h1>Alterar tarefa</h1>
-        <hr>
 
         <label for="titulo">Título:</label>
         <input value="<?= htmlspecialchars($tarefa['titulo']) ?>" type="text" name="titulo" id="titulo" required />
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input value="<?= htmlspecialchars($tarefa['data']) ?>" type="date" name="data" id="data" required />
 
         <input type="submit" value="Salvar" />
-        <hr>
+
     </form>
 </body>
 </html>
